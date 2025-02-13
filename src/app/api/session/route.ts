@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { auth } from "../../../../auth";
 
 export async function GET(_request: Request) {
+  console.log(_request);
   const session = await auth();
 
   if (!session?.user) {
